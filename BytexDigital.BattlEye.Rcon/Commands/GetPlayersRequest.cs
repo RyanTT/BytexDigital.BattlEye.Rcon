@@ -25,7 +25,7 @@ namespace BytexDigital.BattlEye.Rcon.Commands
             // Will not work with user names such as 'Test User (Lobby)' because of how this player list is transmitted. No other alternative found so far.
             var matches = Regex.Matches(
                 content,
-                @"(\d+) *(\d*\.\d*\.\d*\.\d*):(\d*) *(\d+) *(\S{32})\((\S+)\) (.+?)(?=(?: \(Lobby\)$)|(?:$))( \(Lobby\))?",
+                @"(\d+) *(\d*\.\d*\.\d*\.\d*):(\d*) *(-?\d+) *(\S{32})\((\S+)\) (.+?)(?=(?: \(Lobby\)$)|(?:$))( \(Lobby\))?",
                 RegexOptions.Multiline);
             var players = new List<Player>();
 
